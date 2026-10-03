@@ -248,22 +248,24 @@ const TEMPLATES = {
       {n:'Press militar mancuerna', s:3, r:'8-12'},
       {n:'Curl en polea', s:2, r:'10-15'},
       {n:'Plancha (core)', s:3, r:'30-45'}]},
-  r4a: {type:'gym', name:'Rutina 4 · Día A', focus:'Elongación: split frontal + hacia abajo', ex:[
-      {n:'Balanceo frontal de pierna', s:2, r:'10-15'},
-      {n:'Estocada baja (flexor de cadera)', s:3, r:'30-60'},
-      {n:'Cuádriceps acostada', s:3, r:'30-60'},
-      {n:'Isquios contraer-relajar', s:3, r:'30-45'},
-      {n:'Pinza sentada', s:3, r:'30-60'},
-      {n:'Peso muerto rumano', s:3, r:'8-12'},
-      {n:'Split frontal asistido', s:3, r:'30-60'}]},
-  r4b: {type:'gym', name:'Rutina 4 · Día B', focus:'Elongación: split lateral + cadera', ex:[
-      {n:'Balanceo lateral de pierna', s:2, r:'10-15'},
+  r4a: {type:'gym', name:'Rutina 4 · Día A', focus:'Kung fu: patadas frontales + split frontal', ex:[
       {n:'Círculos de cadera', s:2, r:'8-10'},
-      {n:'Groiner (estocada dinámica)', s:2, r:'6-8'},
+      {n:'Zhèng Tī Tuǐ · patada frontal estirada', s:3, r:'8-10'},
+      {n:'Zhèng Yā Tuǐ · presión frontal de pierna', s:3, r:'30-60'},
+      {n:'Gōng Bù profundo · flexor de cadera', s:3, r:'30-60'},
+      {n:'Isquios contraer-relajar', s:3, r:'30-45'},
+      {n:'Kòng Tuǐ frontal · control de pierna', s:3, r:'10-20'},
+      {n:'Shù Chā · split frontal', s:3, r:'30-60'},
+      {n:'Qián Qū · flexión hacia abajo', s:2, r:'30-60'}]},
+  r4b: {type:'gym', name:'Rutina 4 · Día B', focus:'Kung fu: patadas laterales + split lateral + cadera', ex:[
+      {n:'Cè Tī Tuǐ · patada lateral estirada', s:3, r:'8-10'},
+      {n:'Lǐ Hé / Wài Bǎi · patadas en abanico', s:2, r:'8-10'},
+      {n:'Cè Yā Tuǐ · presión lateral de pierna', s:3, r:'30-60'},
+      {n:'Pū Bù · cambio de lado', s:3, r:'6-8'},
       {n:'Mariposa', s:3, r:'30-60'},
-      {n:'Glúteo figura 4', s:3, r:'30-60'},
-      {n:'Flexión de pie hacia abajo', s:3, r:'30-60'},
-      {n:'Split lateral asistido', s:3, r:'30-60'}]},
+      {n:'Kòng Tuǐ lateral · control de pierna', s:3, r:'10-20'},
+      {n:'Héng Chā · split lateral', s:3, r:'30-60'},
+      {n:'Glúteo figura 4', s:2, r:'30-60'}]},
   soccer: {type:'soccer', name:'Actividad', ex:[]},
   rest: {type:'rest', name:'Descanso', ex:[]},
 };
@@ -331,6 +333,18 @@ const EXDB={
   'Glúteo figura 4':{m:['Glúteo','Rotadores de cadera'],tip:['Sentada o acostada, tobillo sobre la rodilla contraria.','Llevá el pecho hacia la pierna con la espalda recta.','Sostené; segundos por lado. Libera la cadera para el split lateral.']},
   'Flexión de pie hacia abajo':{m:['Isquios','Espalda'],tip:['Pies juntos, rodillas estiradas (o apenas flexionadas al principio).','Dejá colgar el torso desde la cadera, cabeza y cuello relajados.','En cada exhalación bajá un poco más hacia el piso.']},
   'Split lateral asistido':{m:['Aductores','Cadera'],tip:['Piernas abiertas, manos en el piso o sobre bloques adelante.','Abrí de a poco, rodillas y pies mirando hacia arriba/adelante.','Podés hacerlo de espaldas a la pared con piernas en V. Segundos totales.']},
+  'Zhèng Tī Tuǐ · patada frontal estirada':{m:['Isquios','Flexores de cadera'],tip:['Patada básica del wushu (正踢腿): pierna estirada, punta del pie hacia vos, sube hacia la frente.','La pierna de apoyo queda firme y estirada; torso erguido, sin inclinarte hacia atrás.','Subí rápido y bajá controlado. Empezá a media altura y subí de a poco. Reps por pierna.']},
+  'Cè Tī Tuǐ · patada lateral estirada':{m:['Aductores','Isquios'],tip:['Patada estirada lateral (侧踢腿): cuerpo de perfil, la pierna sube hacia la oreja del mismo lado.','Rodillas estiradas, cadera abierta, sin girar la pelvis hacia atrás.','Rápido arriba, controlado abajo. Reps por pierna.']},
+  'Lǐ Hé / Wài Bǎi · patadas en abanico':{m:['Cadera','Aductores'],tip:['Lǐ Hé (里合): la pierna estirada dibuja un arco de afuera hacia adentro. Wài Bǎi (外摆): de adentro hacia afuera.','El arco pasa por delante de la cara, pierna estirada.','Moviliza la cadera en todos los planos. Reps por pierna de cada una.']},
+  'Zhèng Yā Tuǐ · presión frontal de pierna':{m:['Isquios','Pantorrilla'],tip:['Talón sobre una barra, mesa o respaldo (正压腿), a la altura de la cadera o más.','Ambas rodillas estiradas, cadera cuadrada al frente, punta del pie hacia vos.','Llevá el pecho hacia el empeine con la espalda larga; presioná suave y sostené. Segundos por pierna.']},
+  'Cè Yā Tuǐ · presión lateral de pierna':{m:['Aductores','Isquios'],tip:['De costado a la barra, apoyá el talón con la pierna estirada (侧压腿).','Brazo de arriba sobre la cabeza; inclinate lateralmente hacia la pierna.','Cadera abierta, sin girar el torso. Segundos por pierna.']},
+  'Gōng Bù profundo · flexor de cadera':{m:['Flexores de cadera','Cuádriceps'],tip:['Postura del arco (弓步) bien larga: rodilla de adelante a 90°, pierna de atrás estirada.','Bajá la cadera hacia el piso y apretá el glúteo de la pierna de atrás.','Prepara la pierna de atrás del split frontal. Segundos por lado.']},
+  'Kòng Tuǐ frontal · control de pierna':{m:['Flexores de cadera','Cuádriceps','Core'],tip:['Control de pierna (控腿): levantá la pierna estirada al frente lo más alto posible SIN usar las manos ni apoyo.','Sostené los segundos que puedas con la pierna de apoyo firme.','Es flexibilidad activa: la que de verdad se usa en las patadas. Segundos por pierna.']},
+  'Kòng Tuǐ lateral · control de pierna':{m:['Glúteo medio','Aductores','Core'],tip:['Levantá la pierna estirada al costado y sostenela en el aire, sin apoyo.','Torso erguido, sin inclinarte hacia el lado contrario.','Flexibilidad activa para la patada lateral. Segundos por pierna.']},
+  'Pū Bù · cambio de lado':{m:['Aductores','Cadera','Cuádriceps'],tip:['Postura baja (仆步): una pierna flexionada a fondo, la otra estirada al costado con el pie plano en el piso.','Pasá de un lado al otro sin subir la cadera; sostené 2-3 s abajo en cada lado.','Pecho erguido. Si no llegás abajo, usá una mano en el piso. Reps por lado.']},
+  'Shù Chā · split frontal':{m:['Isquios','Flexores de cadera'],tip:['Split frontal (竖叉): pierna adelante estirada, rodilla de atrás estirada o apoyada, manos sobre bloques.','Cadera cuadrada al frente; deslizá de a poco hacia abajo.','Tensión 6-7/10, nunca dolor punzante, sin rebotes. Segundos por lado.']},
+  'Héng Chā · split lateral':{m:['Aductores'],tip:['Split lateral (横叉): piernas abiertas, manos o antebrazos en el piso adelante.','Rodillas y puntas hacia arriba; abrí de a poco sin rebotar.','Alternativa: de espalda al piso con las piernas en V contra la pared. Segundos totales.']},
+  'Qián Qū · flexión hacia abajo':{m:['Isquios','Espalda'],tip:['Flexión hacia adelante (前屈): pies juntos, rodillas estiradas.','Doblá desde la cadera y llevá las palmas al piso, después el pecho hacia las piernas.','Exhalá y aflojá en cada respiración. Segundos.']},
   'Plancha (core)':{key:'plank',m:['Core','Abdomen'],tip:['Cuerpo en línea recta de cabeza a talones.','Aprieta abdomen y glúteos; no hundas la cadera.','Respira normal y aguanta el tiempo objetivo.']},
   'Hip thrust':{key:'hipthrust',m:['Glúteo','Femoral'],tip:['Omóplatos apoyados en el banco.','Empuja con los talones y bloquea apretando glúteos.','Mantén el mentón metido, mirada al frente.']},
   'Press banca mancuerna':{key:'benchDB',m:['Pecho','Tríceps','Hombro ant.'],tip:['Mayor recorrido que con barra: aprovecha el estiramiento.','Baja hasta los lados del pecho.','Mantén las muñecas firmes y alineadas.']},
@@ -378,6 +392,10 @@ const EXVID={
   'Plancha (core)':'mwlp75MS6Rg',
 };
 const EXIMG={
+  'Zhèng Tī Tuǐ · patada frontal estirada':'Front_Leg_Raises','Cè Tī Tuǐ · patada lateral estirada':'Side_Leg_Raises','Lǐ Hé / Wài Bǎi · patadas en abanico':'Standing_Hip_Circles',
+  'Zhèng Yā Tuǐ · presión frontal de pierna':'Hamstring_Stretch','Cè Yā Tuǐ · presión lateral de pierna':'Standing_Lateral_Stretch','Gōng Bù profundo · flexor de cadera':'Runners_Stretch',
+  'Kòng Tuǐ frontal · control de pierna':'Front_Leg_Raises','Kòng Tuǐ lateral · control de pierna':'Side_Leg_Raises','Pū Bù · cambio de lado':'Groiners',
+  'Shù Chā · split frontal':'Split_Squats','Héng Chā · split lateral':'Side_Lying_Groin_Stretch','Qián Qū · flexión hacia abajo':'Standing_Toe_Touches',
   'Balanceo frontal de pierna':'Front_Leg_Raises','Balanceo lateral de pierna':'Side_Leg_Raises','Círculos de cadera':'Standing_Hip_Circles',
   'Groiner (estocada dinámica)':'Groiners','Estocada baja (flexor de cadera)':'Runners_Stretch','Cuádriceps acostada':'Lying_Prone_Quadriceps',
   'Isquios contraer-relajar':'Lying_Hamstring','Pinza sentada':'Seated_Floor_Hamstring_Stretch','Split frontal asistido':'Split_Squats',
@@ -448,6 +466,10 @@ Object.assign(SUGGEST,{
   'Balanceo frontal de pierna':null,'Balanceo lateral de pierna':null,'Círculos de cadera':null,'Groiner (estocada dinámica)':null,
   'Estocada baja (flexor de cadera)':null,'Cuádriceps acostada':null,'Isquios contraer-relajar':null,'Pinza sentada':null,'Split frontal asistido':null,
   'Mariposa':null,'Glúteo figura 4':null,'Flexión de pie hacia abajo':null,'Split lateral asistido':null,
+  'Zhèng Tī Tuǐ · patada frontal estirada':null,'Cè Tī Tuǐ · patada lateral estirada':null,'Lǐ Hé / Wài Bǎi · patadas en abanico':null,
+  'Zhèng Yā Tuǐ · presión frontal de pierna':null,'Cè Yā Tuǐ · presión lateral de pierna':null,'Gōng Bù profundo · flexor de cadera':null,
+  'Kòng Tuǐ frontal · control de pierna':null,'Kòng Tuǐ lateral · control de pierna':null,'Pū Bù · cambio de lado':null,
+  'Shù Chā · split frontal':null,'Héng Chā · split lateral':null,'Qián Qū · flexión hacia abajo':null,
   'Dead bug':null,'Pallof press':7.5,'Superman':null,'Plancha (core)':null,'Abdominales rueda':null
 });
 const PAT={
@@ -472,13 +494,17 @@ const PAT={
   'Gemelos de pie':'calves','Gemelo sentado':'calves',
   'Plancha (core)':'core','Abdominales rueda':'core','Dead bug':'core','Pallof press':'core',
   'Superman':'back_ext',
+  'Zhèng Tī Tuǐ · patada frontal estirada':'dyn','Cè Tī Tuǐ · patada lateral estirada':'dyn','Lǐ Hé / Wài Bǎi · patadas en abanico':'dyn','Pū Bù · cambio de lado':'dyn',
+  'Zhèng Yā Tuǐ · presión frontal de pierna':'st_ham','Qián Qū · flexión hacia abajo':'st_ham','Gōng Bù profundo · flexor de cadera':'st_front','Shù Chā · split frontal':'st_front',
+  'Cè Yā Tuǐ · presión lateral de pierna':'st_side','Héng Chā · split lateral':'st_side',
+  'Kòng Tuǐ frontal · control de pierna':'active','Kòng Tuǐ lateral · control de pierna':'active',
   'Balanceo frontal de pierna':'dyn','Balanceo lateral de pierna':'dyn','Círculos de cadera':'dyn','Groiner (estocada dinámica)':'dyn',
   'Estocada baja (flexor de cadera)':'st_front','Cuádriceps acostada':'st_front','Split frontal asistido':'st_front',
   'Isquios contraer-relajar':'st_ham','Pinza sentada':'st_ham','Flexión de pie hacia abajo':'st_ham',
   'Mariposa':'st_side','Glúteo figura 4':'st_side','Split lateral asistido':'st_side',
 };
-const TIMED={'Plancha (core)':'seg','Estocada baja (flexor de cadera)':'seg por lado','Cuádriceps acostada':'seg por lado','Isquios contraer-relajar':'seg por lado','Pinza sentada':'seg','Split frontal asistido':'seg por lado','Mariposa':'seg','Glúteo figura 4':'seg por lado','Flexión de pie hacia abajo':'seg','Split lateral asistido':'seg'};
-const PERSIDE={'Balanceo frontal de pierna':1,'Balanceo lateral de pierna':1,'Círculos de cadera':1,'Groiner (estocada dinámica)':1};
+const TIMED={'Zhèng Yā Tuǐ · presión frontal de pierna':'seg por pierna','Cè Yā Tuǐ · presión lateral de pierna':'seg por pierna','Gōng Bù profundo · flexor de cadera':'seg por lado','Kòng Tuǐ frontal · control de pierna':'seg por pierna','Kòng Tuǐ lateral · control de pierna':'seg por pierna','Shù Chā · split frontal':'seg por lado','Héng Chā · split lateral':'seg','Qián Qū · flexión hacia abajo':'seg','Plancha (core)':'seg','Estocada baja (flexor de cadera)':'seg por lado','Cuádriceps acostada':'seg por lado','Isquios contraer-relajar':'seg por lado','Pinza sentada':'seg','Split frontal asistido':'seg por lado','Mariposa':'seg','Glúteo figura 4':'seg por lado','Flexión de pie hacia abajo':'seg','Split lateral asistido':'seg'};
+const PERSIDE={'Zhèng Tī Tuǐ · patada frontal estirada':1,'Cè Tī Tuǐ · patada lateral estirada':1,'Lǐ Hé / Wài Bǎi · patadas en abanico':1,'Pū Bù · cambio de lado':1,'Balanceo frontal de pierna':1,'Balanceo lateral de pierna':1,'Círculos de cadera':1,'Groiner (estocada dinámica)':1};
 function unitLabel(n){ return TIMED[n]? ' '+TIMED[n] : (PERSIDE[n]?' reps por lado':' reps'); }
 function swapList(name){ return Object.keys(PAT).filter(n=>n!==name && PAT[n]===PAT[name] && (EXVID[n]||EXIMG[n])); }
 function openSwap(dayIdx,name){
@@ -719,7 +745,7 @@ function rotateExercises(){
 }
 function setDayRoutine(dayIdx, key){ S.routine[dayIdx]=JSON.parse(JSON.stringify(TEMPLATES[key])); save(); setView('entrenar'); }
 function wkDone(w){ if(!w) return false; if(w.done) return true; return (w.exercises||[]).some(ex=>(ex.sets||[]).some(s=>(s.r!=null&&s.r!==''))); }
-const WEEK_OPTS=[['r1','Rutina 1'],['r2','Rutina 2'],['r3','Rutina 3'],['r4','Rutina 4 · Elongación']];
+const WEEK_OPTS=[['r1','Rutina 1'],['r2','Rutina 2'],['r3','Rutina 3'],['r4','Rutina 4 · Elongación kung fu']];
 function applyPlan(key){ if(!TEMPLATES[key+'a']) return;
   S.routine[1]=JSON.parse(JSON.stringify(TEMPLATES[key+'a']));
   S.routine[2]=JSON.parse(JSON.stringify(TEMPLATES[key+'b']));
@@ -1196,17 +1222,18 @@ function viewGuia(){
       </ul>
     </div>
 
-    <div class="card"><h3>🤸‍♀️ Elongación (Rutina 4)</h3>
-      <p style="margin:0 0 10px">Pensada para split frontal, split lateral, bajar el torso hacia el piso y movilidad de cadera. Lo que dice la evidencia:</p>
+    <div class="card"><h3>🥋 Elongación para kung fu (Rutina 4)</h3>
+      <p style="margin:0 0 10px">Sigue la estructura del entrenamiento básico de piernas del wushu: presiones de pierna, patadas estiradas, control de pierna, splits y posturas bajas.</p>
       <ul class="tips">
-        <li><b>Frecuencia y tiempo total ganan</b>: lo que más mejora el rango es acumular al menos 5 minutos por semana por zona y estirar 5 o más días por semana. Una sesión larga aislada rinde menos que poco y seguido.</li>
-        <li><b>Estático o contraer-relajar (PNF)</b> funcionan parecido; los dos superan a los rebotes. Sostené 30-60 s por serie.</li>
-        <li>Al principio la mejora es sobre todo de <b>tolerancia al estiramiento</b> (el sistema nervioso "te deja" ir más lejos): por eso la constancia es todo.</li>
-        <li>La <b>fuerza en rango completo</b> (peso muerto rumano, sentadilla profunda) mejora la flexibilidad tanto como estirar, y te da control en las posiciones largas.</li>
-        <li>Para las patadas, los <b>balanceos de pierna</b> entrenan la flexibilidad dinámica.</li>
-        <li><b>Antes de entrenar fuerte</b>: dinámico + estático corto (hasta 60 s por músculo no afecta el rendimiento). Las sostenciones largas, después o en otro momento.</li>
-        <li>Tensión de 6-7/10, nunca dolor punzante, y sin rebotar en el split.</li>
-        <li>Si esa semana elegís la Rutina 4, reemplaza la fuerza. Ideal: alternala, o hacé 10-15 min de estos estiramientos en casa los días sin gym.</li>
+        <li><b>Tī Tuǐ (patadas estiradas)</b>: frontal, lateral y en abanico. Son la flexibilidad <b>dinámica</b> de las patadas y van primero, como entrada en calor.</li>
+        <li><b>Yā Tuǐ (presiones de pierna)</b> sobre barra o mesa, frontal y lateral: el estiramiento clásico para subir la altura de la patada.</li>
+        <li><b>Kòng Tuǐ (control de pierna)</b>: sostener la pierna en el aire sin apoyo. Entrena la flexibilidad <b>activa</b>, la que más se relaciona con el nivel en artes marciales y la más difícil de desarrollar.</li>
+        <li><b>Shù Chā y Héng Chā</b> (split frontal y lateral) y <b>Pū Bù</b> (postura baja): rango de cadera y aductores para posturas y patadas.</li>
+        <li>Cuándo: lo dinámico antes de la clase; las sostenciones largas <b>después</b> de entrenar, con el cuerpo caliente. Estático corto (hasta 60 s por músculo) antes de clase no afecta la potencia.</li>
+        <li>Cuánto: la constancia gana. Estirar 5+ días por semana, sumando 5+ min por zona, rinde más que sesiones largas esporádicas. 15-20 min diarios alcanzan.</li>
+        <li>Estático o contraer-relajar dan resultados parecidos; en atletas de wushu el contraer-relajar mejoró la flexibilidad de isquios.</li>
+        <li>Respirá y aflojá en cada exhalación. Tensión 6-7/10, nunca dolor punzante, nunca rebotar en el split.</li>
+        <li>Si esa semana elegís la Rutina 4 reemplaza la fuerza; lo ideal es usarla también después de las clases de kung fu.</li>
       </ul>
     </div>
 
