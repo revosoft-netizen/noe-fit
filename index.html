@@ -248,6 +248,22 @@ const TEMPLATES = {
       {n:'Press militar mancuerna', s:3, r:'8-12'},
       {n:'Curl en polea', s:2, r:'10-15'},
       {n:'Plancha (core)', s:3, r:'30-45'}]},
+  r4a: {type:'gym', name:'Rutina 4 · Día A', focus:'Elongación: split frontal + hacia abajo', ex:[
+      {n:'Balanceo frontal de pierna', s:2, r:'10-15'},
+      {n:'Estocada baja (flexor de cadera)', s:3, r:'30-60'},
+      {n:'Cuádriceps acostada', s:3, r:'30-60'},
+      {n:'Isquios contraer-relajar', s:3, r:'30-45'},
+      {n:'Pinza sentada', s:3, r:'30-60'},
+      {n:'Peso muerto rumano', s:3, r:'8-12'},
+      {n:'Split frontal asistido', s:3, r:'30-60'}]},
+  r4b: {type:'gym', name:'Rutina 4 · Día B', focus:'Elongación: split lateral + cadera', ex:[
+      {n:'Balanceo lateral de pierna', s:2, r:'10-15'},
+      {n:'Círculos de cadera', s:2, r:'8-10'},
+      {n:'Groiner (estocada dinámica)', s:2, r:'6-8'},
+      {n:'Mariposa', s:3, r:'30-60'},
+      {n:'Glúteo figura 4', s:3, r:'30-60'},
+      {n:'Flexión de pie hacia abajo', s:3, r:'30-60'},
+      {n:'Split lateral asistido', s:3, r:'30-60'}]},
   soccer: {type:'soccer', name:'Actividad', ex:[]},
   rest: {type:'rest', name:'Descanso', ex:[]},
 };
@@ -302,6 +318,19 @@ const EXDB={
   'Dead bug':{m:['Core','Abdomen'],tip:['Boca arriba, zona lumbar pegada al piso todo el tiempo.','Extendé brazo y pierna opuestos despacio.','Exhalá al extender; si la lumbar se despega, acortá el recorrido.']},
   'Pallof press':{m:['Core','Oblicuos'],tip:['De costado a la polea, a la altura del pecho.','Empujá el agarre hacia adelante sin dejar que el torso gire.','Sostené 2 segundos y volvé; hacé ambos lados.']},
   'Superman':{m:['Lumbares','Glúteo','Espalda alta'],tip:['Boca abajo, brazos estirados adelante.','Elevá brazos, pecho y piernas a la vez, apretando glúteos y omóplatos.','Sostené 2 segundos arriba, mirada al piso.']},
+  'Balanceo frontal de pierna':{m:['Isquios','Flexores de cadera'],tip:['Apoyate en una pared y balanceá la pierna estirada hacia adelante y arriba.','Empezá bajo y subí la altura de a poco, sin forzar al final.','Es elongación dinámica: prepara para patadas altas. Contá reps por pierna.']},
+  'Balanceo lateral de pierna':{m:['Aductores','Glúteo medio'],tip:['De frente a la pared, balanceá la pierna hacia el costado y cruzando.','Subí la amplitud de a poco, torso quieto.','Reps por pierna; es tu calentamiento para el split lateral y las patadas laterales.']},
+  'Círculos de cadera':{m:['Cadera','Movilidad'],tip:['Parada en una pierna, dibujá círculos grandes con la rodilla.','10 hacia afuera y 10 hacia adentro por lado.','Lento y controlado: buscá el rango completo de la cadera.']},
+  'Groiner (estocada dinámica)':{m:['Aductores','Flexores de cadera'],tip:['Desde plancha, llevá un pie al lado de la mano.','Bajá la cadera y el codo hacia el piso, sostené 2 segundos.','Volvé y cambiá. Reps por lado.']},
+  'Estocada baja (flexor de cadera)':{m:['Flexores de cadera','Cuádriceps'],tip:['Rodilla de atrás en el piso, pie de adelante bien adelante.','Apretá el glúteo de la pierna de atrás y llevá la cadera hacia adelante y abajo.','Sostené; segundos por lado. Es la pierna de atrás del split frontal.']},
+  'Cuádriceps acostada':{m:['Cuádriceps','Flexores de cadera'],tip:['Boca abajo, tomá el tobillo y llevá el talón a la cola.','Apretá glúteo y apoyá la cadera contra el piso.','Sostené sin dolor; segundos por lado.']},
+  'Isquios contraer-relajar':{m:['Isquios'],tip:['Boca arriba, pierna estirada hacia arriba (con banda o toalla).','Empujá la pierna contra la banda 5 s al 50%, relajá y llevala un poco más lejos.','Repetí 3-4 veces dentro de la serie (técnica PNF). Segundos por lado.']},
+  'Pinza sentada':{m:['Isquios','Espalda baja'],tip:['Sentada con piernas juntas y estiradas.','Inclinate desde la cadera (no redondeando la espalda) hacia los pies.','Relajá en cada exhalación y bajá un poco más.']},
+  'Split frontal asistido':{m:['Isquios','Flexores de cadera'],tip:['Pierna adelante estirada, rodilla de atrás en el piso, manos sobre bloques o sillas.','Deslizá de a poco hacia el split, cadera mirando al frente.','Tensión 6-7/10, nunca dolor punzante. Segundos por lado.']},
+  'Mariposa':{m:['Aductores','Cadera'],tip:['Sentada, plantas de los pies juntas, talones cerca.','Espalda larga, inclinate hacia adelante desde la cadera.','Dejá caer las rodillas sin empujarlas con fuerza.']},
+  'Glúteo figura 4':{m:['Glúteo','Rotadores de cadera'],tip:['Sentada o acostada, tobillo sobre la rodilla contraria.','Llevá el pecho hacia la pierna con la espalda recta.','Sostené; segundos por lado. Libera la cadera para el split lateral.']},
+  'Flexión de pie hacia abajo':{m:['Isquios','Espalda'],tip:['Pies juntos, rodillas estiradas (o apenas flexionadas al principio).','Dejá colgar el torso desde la cadera, cabeza y cuello relajados.','En cada exhalación bajá un poco más hacia el piso.']},
+  'Split lateral asistido':{m:['Aductores','Cadera'],tip:['Piernas abiertas, manos en el piso o sobre bloques adelante.','Abrí de a poco, rodillas y pies mirando hacia arriba/adelante.','Podés hacerlo de espaldas a la pared con piernas en V. Segundos totales.']},
   'Plancha (core)':{key:'plank',m:['Core','Abdomen'],tip:['Cuerpo en línea recta de cabeza a talones.','Aprieta abdomen y glúteos; no hundas la cadera.','Respira normal y aguanta el tiempo objetivo.']},
   'Hip thrust':{key:'hipthrust',m:['Glúteo','Femoral'],tip:['Omóplatos apoyados en el banco.','Empuja con los talones y bloquea apretando glúteos.','Mantén el mentón metido, mirada al frente.']},
   'Press banca mancuerna':{key:'benchDB',m:['Pecho','Tríceps','Hombro ant.'],tip:['Mayor recorrido que con barra: aprovecha el estiramiento.','Baja hasta los lados del pecho.','Mantén las muñecas firmes y alineadas.']},
@@ -349,6 +378,10 @@ const EXVID={
   'Plancha (core)':'mwlp75MS6Rg',
 };
 const EXIMG={
+  'Balanceo frontal de pierna':'Front_Leg_Raises','Balanceo lateral de pierna':'Side_Leg_Raises','Círculos de cadera':'Standing_Hip_Circles',
+  'Groiner (estocada dinámica)':'Groiners','Estocada baja (flexor de cadera)':'Runners_Stretch','Cuádriceps acostada':'Lying_Prone_Quadriceps',
+  'Isquios contraer-relajar':'Lying_Hamstring','Pinza sentada':'Seated_Floor_Hamstring_Stretch','Split frontal asistido':'Split_Squats',
+  'Mariposa':'Groin_and_Back_Stretch','Glúteo figura 4':'Seated_Glute','Flexión de pie hacia abajo':'Standing_Toe_Touches','Split lateral asistido':'Side_Lying_Groin_Stretch',
   'Abducción de cadera':'Thigh_Abductor','Patada de glúteo en polea':'One-Legged_Cable_Kickback','Puente de glúteo':'Barbell_Glute_Bridge',
   'Sentadilla goblet':'Goblet_Squat','Step-up con mancuernas':'Dumbbell_Step_Ups','Dead bug':'Dead_Bug','Pallof press':'Pallof_Press','Superman':'Superman',
   'Hack squat':'Hack_Squat',
@@ -412,6 +445,9 @@ Object.assign(SUGGEST,{
   'Press militar mancuerna':6,'Press militar':15,'Press inclinado mancuerna':7,'Press banca mancuerna':8,'Press banca con barra':20,
   'Elevaciones laterales':3,'Elevaciones laterales en polea':2.5,'Curl en polea':10,'Curl con barra':12,'Curl martillo':5,
   'Extensión tríceps polea':12.5,'Aperturas en máquina':20,'Cruce de poleas':5,
+  'Balanceo frontal de pierna':null,'Balanceo lateral de pierna':null,'Círculos de cadera':null,'Groiner (estocada dinámica)':null,
+  'Estocada baja (flexor de cadera)':null,'Cuádriceps acostada':null,'Isquios contraer-relajar':null,'Pinza sentada':null,'Split frontal asistido':null,
+  'Mariposa':null,'Glúteo figura 4':null,'Flexión de pie hacia abajo':null,'Split lateral asistido':null,
   'Dead bug':null,'Pallof press':7.5,'Superman':null,'Plancha (core)':null,'Abdominales rueda':null
 });
 const PAT={
@@ -436,7 +472,14 @@ const PAT={
   'Gemelos de pie':'calves','Gemelo sentado':'calves',
   'Plancha (core)':'core','Abdominales rueda':'core','Dead bug':'core','Pallof press':'core',
   'Superman':'back_ext',
+  'Balanceo frontal de pierna':'dyn','Balanceo lateral de pierna':'dyn','Círculos de cadera':'dyn','Groiner (estocada dinámica)':'dyn',
+  'Estocada baja (flexor de cadera)':'st_front','Cuádriceps acostada':'st_front','Split frontal asistido':'st_front',
+  'Isquios contraer-relajar':'st_ham','Pinza sentada':'st_ham','Flexión de pie hacia abajo':'st_ham',
+  'Mariposa':'st_side','Glúteo figura 4':'st_side','Split lateral asistido':'st_side',
 };
+const TIMED={'Plancha (core)':'seg','Estocada baja (flexor de cadera)':'seg por lado','Cuádriceps acostada':'seg por lado','Isquios contraer-relajar':'seg por lado','Pinza sentada':'seg','Split frontal asistido':'seg por lado','Mariposa':'seg','Glúteo figura 4':'seg por lado','Flexión de pie hacia abajo':'seg','Split lateral asistido':'seg'};
+const PERSIDE={'Balanceo frontal de pierna':1,'Balanceo lateral de pierna':1,'Círculos de cadera':1,'Groiner (estocada dinámica)':1};
+function unitLabel(n){ return TIMED[n]? ' '+TIMED[n] : (PERSIDE[n]?' reps por lado':' reps'); }
 function swapList(name){ return Object.keys(PAT).filter(n=>n!==name && PAT[n]===PAT[name] && (EXVID[n]||EXIMG[n])); }
 function openSwap(dayIdx,name){
   const opts=swapList(name);
@@ -676,7 +719,7 @@ function rotateExercises(){
 }
 function setDayRoutine(dayIdx, key){ S.routine[dayIdx]=JSON.parse(JSON.stringify(TEMPLATES[key])); save(); setView('entrenar'); }
 function wkDone(w){ if(!w) return false; if(w.done) return true; return (w.exercises||[]).some(ex=>(ex.sets||[]).some(s=>(s.r!=null&&s.r!==''))); }
-const WEEK_OPTS=[['r1','Rutina 1'],['r2','Rutina 2'],['r3','Rutina 3']];
+const WEEK_OPTS=[['r1','Rutina 1'],['r2','Rutina 2'],['r3','Rutina 3'],['r4','Rutina 4 · Elongación']];
 function applyPlan(key){ if(!TEMPLATES[key+'a']) return;
   S.routine[1]=JSON.parse(JSON.stringify(TEMPLATES[key+'a']));
   S.routine[2]=JSON.parse(JSON.stringify(TEMPLATES[key+'b']));
@@ -785,7 +828,7 @@ function openSessionModal(){
         <div class="exh">
           <div class="exh-main" onclick="openExInfo('${escq(ex.n)}',true)">
             <div class="exthumb">${exArt(ex.n)}</div>
-            <div style="min-width:0"><b>${ex.n}</b><br><span class="target">Objetivo: ${ex.target} · ver guía ›</span></div>
+            <div style="min-width:0"><b>${ex.n}</b><br><span class="target">Objetivo: ${ex.target}${unitLabel(ex.n)} · ver guía ›</span></div>
           </div>
           <div class="exhr"><span class="extick" title="Ejercicio completado">✓</span>${swapList(ex.n).length?`<button class="swapbtn" title="Cambiar ejercicio" onclick="openSwap(${session.dayIdx},'${escq(ex.n)}')">⇄</button>`:''}</div>
         </div>
@@ -807,7 +850,7 @@ function setRow(ei,si,s){
   return `<div class="setrow" id="set-${ei}-${si}">
     <div class="sn">${si+1}</div>
     <input type="number" inputmode="decimal" placeholder="${ph}" value="${s.w}" oninput="upd(${ei},${si},'w',this.value)">
-    <input type="number" inputmode="numeric" placeholder="reps" value="${s.r}" oninput="upd(${ei},${si},'r',this.value)">
+    <input type="number" inputmode="numeric" placeholder="${TIMED[nm]?'seg':'reps'}" value="${s.r}" oninput="upd(${ei},${si},'r',this.value)">
     <button class="rm" onclick="rmSet(${ei},${si})">−</button>
   </div>`;
 }
@@ -1150,6 +1193,20 @@ function viewGuia(){
         <li>El core se entrena <b>resistiendo</b> el movimiento (plancha, dead bug, pallof press): así protege la zona lumbar en el día a día.</li>
         <li>Glúteos fuertes estabilizan la pelvis y alivian la lumbar.</li>
         <li>Fuera del gym: pantalla a la altura de los ojos y pausas para moverte cada hora.</li>
+      </ul>
+    </div>
+
+    <div class="card"><h3>🤸‍♀️ Elongación (Rutina 4)</h3>
+      <p style="margin:0 0 10px">Pensada para split frontal, split lateral, bajar el torso hacia el piso y movilidad de cadera. Lo que dice la evidencia:</p>
+      <ul class="tips">
+        <li><b>Frecuencia y tiempo total ganan</b>: lo que más mejora el rango es acumular al menos 5 minutos por semana por zona y estirar 5 o más días por semana. Una sesión larga aislada rinde menos que poco y seguido.</li>
+        <li><b>Estático o contraer-relajar (PNF)</b> funcionan parecido; los dos superan a los rebotes. Sostené 30-60 s por serie.</li>
+        <li>Al principio la mejora es sobre todo de <b>tolerancia al estiramiento</b> (el sistema nervioso "te deja" ir más lejos): por eso la constancia es todo.</li>
+        <li>La <b>fuerza en rango completo</b> (peso muerto rumano, sentadilla profunda) mejora la flexibilidad tanto como estirar, y te da control en las posiciones largas.</li>
+        <li>Para las patadas, los <b>balanceos de pierna</b> entrenan la flexibilidad dinámica.</li>
+        <li><b>Antes de entrenar fuerte</b>: dinámico + estático corto (hasta 60 s por músculo no afecta el rendimiento). Las sostenciones largas, después o en otro momento.</li>
+        <li>Tensión de 6-7/10, nunca dolor punzante, y sin rebotar en el split.</li>
+        <li>Si esa semana elegís la Rutina 4, reemplaza la fuerza. Ideal: alternala, o hacé 10-15 min de estos estiramientos en casa los días sin gym.</li>
       </ul>
     </div>
 
