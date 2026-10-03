@@ -676,7 +676,7 @@ function rotateExercises(){
 }
 function setDayRoutine(dayIdx, key){ S.routine[dayIdx]=JSON.parse(JSON.stringify(TEMPLATES[key])); save(); setView('entrenar'); }
 function wkDone(w){ if(!w) return false; if(w.done) return true; return (w.exercises||[]).some(ex=>(ex.sets||[]).some(s=>(s.r!=null&&s.r!==''))); }
-const WEEK_OPTS=[['r1','Rutina 1 · Glúteo + postura'],['r2','Rutina 2 · Glúteo + espalda fuerte'],['r3','Rutina 3 · Tonificación total']];
+const WEEK_OPTS=[['r1','Rutina 1'],['r2','Rutina 2'],['r3','Rutina 3']];
 function applyPlan(key){ if(!TEMPLATES[key+'a']) return;
   S.routine[1]=JSON.parse(JSON.stringify(TEMPLATES[key+'a']));
   S.routine[2]=JSON.parse(JSON.stringify(TEMPLATES[key+'b']));
@@ -694,7 +694,7 @@ function trainDayCard(i){
   const edit = '';  // edición por-día quitada; se cambia cada ejercicio dentro de la rutina con ⇄
   return `<div class="daycard ${i===di?'today':''} ${doneToday?'done':''}">
     <div class="dd" style="background:${col};color:var(--cream)">${ic}</div>
-    <div class="dn"><b>${i===1?'Día A':i===2?'Día B':DAY_NAMES[i]}</b><span>${r.type==='gym'?(r.focus||r.name)+' · '+(r.ex||[]).length+' ejercicios':'Descanso'}</span></div>
+    <div class="dn"><b>${i===1?'Día A':i===2?'Día B':DAY_NAMES[i]}</b><span>${r.type==='gym'?r.name.split(' · ')[0]+' · '+(r.ex||[]).length+' ejercicios':'Descanso'}</span></div>
     ${edit}${start}
   </div>`;
 }
